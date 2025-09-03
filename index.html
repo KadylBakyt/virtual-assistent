@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="title">Astana City Hospital</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <span class="logo" aria-hidden="true">🏥</span>
+          <h1 class="brand-name" data-i18n="hospitalName">Astana City Hospital</h1>
+        </div>
+        <nav class="main-nav" aria-label="Primary">
+          <a href="#services" data-i18n="nav.services">Services</a>
+          <a href="#about" data-i18n="nav.about">About</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="lang-switcher">
+          <label for="lang" class="sr-only" data-i18n="language.label">Language</label>
+          <select id="lang" aria-label="Language selector">
+            <option value="kk">Қазақша</option>
+            <option value="ru">Русский</option>
+            <option value="en" selected>English</option>
+            <option value="zh">简体中文</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <h2 data-i18n="hero.title">Quality healthcare in the heart of Astana</h2>
+          <p class="subtitle" data-i18n="hero.subtitle">
+            Modern diagnostics, compassionate care, and trusted specialists.
+          </p>
+          <div class="cta-row">
+            <a href="#contact" class="btn btn-primary" data-i18n="hero.book">Book an appointment</a>
+            <a href="#services" class="btn btn-outline" data-i18n="hero.viewServices">View services</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section">
+        <div class="container">
+          <h3 class="section-title" data-i18n="services.title">Our Services</h3>
+          <div class="services-grid">
+            <article class="card">
+              <h4 data-i18n="services.cards.0.title">Outpatient Clinic</h4>
+              <p data-i18n="services.cards.0.body">Family medicine, pediatrics, and specialist consultations.</p>
+            </article>
+            <article class="card">
+              <h4 data-i18n="services.cards.1.title">Diagnostics</h4>
+              <p data-i18n="services.cards.1.body">Laboratory, ultrasound, X-ray, MRI.</p>
+            </article>
+            <article class="card">
+              <h4 data-i18n="services.cards.2.title">Emergency Care</h4>
+              <p data-i18n="services.cards.2.body">24/7 urgent help with rapid triage.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section alt">
+        <div class="container cols">
+          <div>
+            <h3 class="section-title" data-i18n="about.title">About our hospital</h3>
+            <p data-i18n="about.body">
+              We combine international standards with local expertise to deliver safe, patient‑centered care for the community of Astana.
+            </p>
+          </div>
+          <div class="stats">
+            <div class="stat">
+              <div class="number">24/7</div>
+              <div class="label" data-i18n="about.stats.0">Emergency</div>
+            </div>
+            <div class="stat">
+              <div class="number">150+</div>
+              <div class="label" data-i18n="about.stats.1">Doctors</div>
+            </div>
+            <div class="stat">
+              <div class="number">20+</div>
+              <div class="label" data-i18n="about.stats.2">Departments</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container cols">
+          <div>
+            <h3 class="section-title" data-i18n="contact.title">Contact us</h3>
+            <ul class="contact-list">
+              <li>
+                <span class="icon" aria-hidden="true">📍</span>
+                <span data-i18n="contact.address">Astana, Kazakhstan</span>
+              </li>
+              <li>
+                <span class="icon" aria-hidden="true">📞</span>
+                <a href="tel:+77000000000" data-i18n="contact.phone">+7 700 000 00 00</a>
+              </li>
+              <li>
+                <span class="icon" aria-hidden="true">✉️</span>
+                <a href="mailto:info@astanahospital.kz" data-i18n="contact.email">info@astanahospital.kz</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div class="map-placeholder" role="img" aria-label="Map placeholder">Astana Map</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <small>
+          <span data-i18n="footer.rights">© Astana City Hospital. All rights reserved.</span>
+        </small>
+      </div>
+    </footer>
+
+    <!-- Virtual Assistant Floating Button -->
+    <button id="assistant-button" class="assistant-button" aria-haspopup="dialog" aria-controls="assistant-modal">
+      🤖 <span data-i18n="assistant.button">Assistant</span>
+    </button>
+
+    <!-- Assistant Modal -->
+    <div id="assistant-modal" class="assistant-modal" role="dialog" aria-modal="true" aria-labelledby="assistant-title" hidden>
+      <div class="assistant-dialog">
+        <div class="assistant-header">
+          <h3 id="assistant-title" data-i18n="assistant.title">Virtual Assistant</h3>
+          <button class="icon-btn close" id="assistant-close" aria-label="Close">✕</button>
+        </div>
+        <div class="assistant-tabs" role="tablist" aria-label="Assistant Tabs">
+          <button role="tab" class="tab active" data-tab="chat" aria-selected="true" id="tab-chat" data-i18n="assistant.tabs.chat">Chat</button>
+          <button role="tab" class="tab" data-tab="faq" aria-selected="false" id="tab-faq" data-i18n="assistant.tabs.faq">FAQ</button>
+          <button role="tab" class="tab" data-tab="social" aria-selected="false" id="tab-social" data-i18n="assistant.tabs.social">Social</button>
+          <button role="tab" class="tab" data-tab="contact" aria-selected="false" id="tab-contact" data-i18n="assistant.tabs.contact">Contacts</button>
+        </div>
+        <div class="assistant-content">
+          <!-- Chat Panel -->
+          <section id="panel-chat" role="tabpanel" aria-labelledby="tab-chat" class="panel active">
+            <div class="chat-window" id="chat-window" aria-live="polite"></div>
+            <form id="chat-form" class="chat-form" autocomplete="off">
+              <input id="chat-input" type="text" class="chat-input" data-i18n-placeholder="assistant.chat.placeholder" placeholder="Type your message..." />
+              <button type="submit" class="btn btn-primary" data-i18n="assistant.chat.send">Send</button>
+            </form>
+          </section>
+
+          <!-- FAQ Panel -->
+          <section id="panel-faq" role="tabpanel" aria-labelledby="tab-faq" class="panel" hidden>
+            <div class="faq">
+              <details>
+                <summary data-i18n="faq.q1">How do I make an appointment?</summary>
+                <p data-i18n="faq.a1">You can call us, write an email, or use the assistant to request a callback.</p>
+              </details>
+              <details>
+                <summary data-i18n="faq.q2">Do you accept insurance?</summary>
+                <p data-i18n="faq.a2">Yes, we work with major insurance providers. Please bring your policy.</p>
+              </details>
+              <details>
+                <summary data-i18n="faq.q3">Where are you located?</summary>
+                <p data-i18n="faq.a3">We are in Astana. See the Contact section for the address.</p>
+              </details>
+            </div>
+          </section>
+
+          <!-- Social Panel -->
+          <section id="panel-social" role="tabpanel" aria-labelledby="tab-social" class="panel" hidden>
+            <ul class="social-list">
+              <li><a href="#" target="_blank" rel="noopener" aria-label="Telegram">📨 Telegram</a></li>
+              <li><a href="#" target="_blank" rel="noopener" aria-label="Instagram">📷 Instagram</a></li>
+              <li><a href="#" target="_blank" rel="noopener" aria-label="Facebook">📘 Facebook</a></li>
+              <li><a href="#" target="_blank" rel="noopener" aria-label="VK">🖧 VK</a></li>
+              <li><a href="#" target="_blank" rel="noopener" aria-label="WeChat">🟩 WeChat</a></li>
+            </ul>
+          </section>
+
+          <!-- Contact Panel -->
+          <section id="panel-contact" role="tabpanel" aria-labelledby="tab-contact" class="panel" hidden>
+            <ul class="contact-list">
+              <li>
+                <span class="icon" aria-hidden="true">📍</span>
+                <span data-i18n="contact.address">Astana, Kazakhstan</span>
+              </li>
+              <li>
+                <span class="icon" aria-hidden="true">📞</span>
+                <a href="tel:+77000000000" data-i18n="contact.phone">+7 700 000 00 00</a>
+              </li>
+              <li>
+                <span class="icon" aria-hidden="true">✉️</span>
+                <a href="mailto:info@astanahospital.kz" data-i18n="contact.email">info@astanahospital.kz</a>
+              </li>
+              <li>
+                <span class="icon" aria-hidden="true">🕒</span>
+                <span data-i18n="contact.hours">Mon–Sun, 24/7 Emergency</span>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/main.js" defer></script>
+  </body>
+  
+</html>
