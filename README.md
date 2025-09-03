@@ -11,8 +11,8 @@ This is a simple, responsive landing page for a hospital in Astana (Kazakhstan),
 
 ## Structure
 - `index.html` – markup
-- `assets/css/styles.css` – styles
-- `assets/js/main.js` – i18n + assistant logic
+- `styles.css` – styles
+- `script.js` – i18n + assistant logic
 
 ## Run
 Open `index.html` directly in your browser. No build step required.
@@ -30,7 +30,7 @@ node server.js
 ## Customize
 - Replace social links in the Social tab.
 - Update contact info in both the main page and assistant Contact tab.
-- Add more translations in `assets/js/main.js` under the `i18n` object.
+- Add more translations in `main.js` under the `i18n` object.
 
 ## Notes
 No external dependencies. Uses plain HTML/CSS/JS.
