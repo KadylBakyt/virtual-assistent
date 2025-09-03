@@ -182,6 +182,8 @@
   // State
   const langSelect = document.getElementById('lang');
   const root = document.documentElement;
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeIcon = document.getElementById('theme-icon');
 
   function applyTranslations(lang) {
     const dict = i18n[lang] || i18n.en;
@@ -321,4 +323,29 @@
   }
   applyTranslations(langSelect.value);
   langSelect.addEventListener('change', () => applyTranslations(langSelect.value));
+
+  // Theme toggle
+  function applyTheme(theme) {
+    const isLight = theme === 'light';
+    root.classList.toggle('light', isLight);
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    if (themeIcon) themeIcon.textContent = isLight ? '🌞' : '🌙';
+    if (themeToggle) themeToggle.title = isLight ? 'Switch to dark' : 'Switch to light';
+  }
+
+  function initTheme() {
+    const stored = localStorage.getItem('theme');
+    if (stored) return applyTheme(stored);
+    const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+    applyTheme(prefersLight ? 'light' : 'dark');
+  }
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const next = root.classList.contains('light') ? 'dark' : 'light';
+      applyTheme(next);
+    });
+  }
+
+  initTheme();
 })();
