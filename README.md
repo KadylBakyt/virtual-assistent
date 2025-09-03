@@ -34,3 +34,8 @@ node server.js
 
 ## Notes
 No external dependencies. Uses plain HTML/CSS/JS.
+
+## Screen
+
+<img width="2242" height="1267" alt="image" src="https://github.com/user-attachments/assets/00b5af0f-7126-428b-9d15-14b805276d25" />
+
